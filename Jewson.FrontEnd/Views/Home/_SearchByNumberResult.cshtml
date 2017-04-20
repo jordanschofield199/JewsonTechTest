@@ -1,0 +1,43 @@
+﻿@model Jewson.RestService.Business.DTO.BranchDTO
+
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">Search Results</div>
+        <div class="panel-body">
+            <table class="table">
+                <tbody>
+                    @if (Model != null)
+                    {
+                        <tr>
+                            <td><strong>Number</strong></td>
+                            <td>@Model.Number</td>
+                            <td><strong>Name</strong></td>
+                            <td>@Model.Name</td>
+                        </tr>
+                        if (Model.Specialisms != null && Model.Specialisms.Any())
+                        {
+                            <tr style="background-color: burlywood">
+                                <td colspan="4"><strong>Specialisms</strong></td>
+                            </tr>
+                            foreach (var specialism in Model.Specialisms)
+                            {
+                                <tr>
+                                    <td>Id</td>
+                                    <td>@specialism.Id</td>
+                                    <td>Name</td>
+                                    <td>@specialism.Name</td>
+                                </tr>
+                            }
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6">No Data</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

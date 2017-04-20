@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebServices", "WebServices"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonLibraries", "CommonLibraries", "{00C2E114-BE12-4F3D-8A8F-415B36FC229A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jewson.Logging", "..\Jewson.Logging\Jewson.Logging.csproj", "{F90DC24B-355B-407F-A035-FA683874AD2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jewson.Logging", "Jewson.Logging\Jewson.Logging.csproj", "{F90DC24B-355B-407F-A035-FA683874AD2A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataLayer", "DataLayer", "{8A01E3EC-B77C-463D-B9CD-5164088D6F80}"
 EndProject
@@ -35,7 +35,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jewson.Tests.Unit.Client", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{6778BD3A-5F0D-4073-8503-BC02D4929B46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jewson.FrontEnd", "..\Jewson.FrontEnd\Jewson.FrontEnd.csproj", "{6296E45F-5E37-4A9A-AD64-ADFBF2BB6AE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jewson.FrontEnd", "Jewson.FrontEnd\Jewson.FrontEnd.csproj", "{6296E45F-5E37-4A9A-AD64-ADFBF2BB6AE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jewson.Tests.Unit.RestService", "Jewson.Tests.Unit.RestService\Jewson.Tests.Unit.RestService.csproj", "{B6A47BC9-A7FC-416B-8459-C1F5078DA3F4}"
 EndProject

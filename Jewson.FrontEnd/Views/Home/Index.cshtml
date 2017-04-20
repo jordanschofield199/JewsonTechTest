@@ -1,0 +1,71 @@
+﻿@model Jewson.FrontEnd.Models.ViewModels.HomeViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Search
+            </div>
+            <div class="panel-body">
+                @using (Ajax.BeginForm(new AjaxOptions {HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "ajax-placeholder", Url = Url.Action("SearchByNumber")}))
+                {
+                    @Html.ValidationSummary()
+
+                    @Html.TextBoxFor(x => x.Number, new {placeholder = "Search by Number"})
+
+                    <input type="submit" value="search" class="btn btn-sm btn-default"/>
+                }
+            </div>
+        </div>
+    </div>
+    <div id="ajax-placeholder"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body table-responsive">
+                <table id="branchDataTable" class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th data-column-group="number">Number</th>
+                        <th data-column-group="name">Name</th>
+                        <th data-column-group="address1">Address 1</th>
+                        <th data-column-group="town">Town</th>
+                        <th data-column-group="county">County</th>
+                        <th data-column-group="postcode">Postcode</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var getDataUrl = '@Url.Action("GetBranchData")';
+
+    $('#branchDataTable').dataTable({
+        "order": [[0, "desc"]],
+        "processing": true,
+        "serverSide": true,
+        "searching": true,
+        "ordering": true,
+        ajax: {
+            "url": getDataUrl,
+            "type": "POST"
+        },
+        "columns": [
+            { "data": "Number" },
+            { "data": "Name" },
+            { "data": "Address1" },
+            { "data": "Town" },
+            { "data": "County" },
+            { "data": "Postcode" }
+        ]
+    });
+</script>

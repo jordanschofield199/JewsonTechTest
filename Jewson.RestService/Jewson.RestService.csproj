@@ -254,7 +254,7 @@
     <Content Include="StaticReferenceData\branches.json" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Jewson.Logging\Jewson.Logging.csproj">
+    <ProjectReference Include="..\Jewson.Logging\Jewson.Logging.csproj">
       <Project>{f90dc24b-355b-407f-a035-fa683874ad2a}</Project>
       <Name>Jewson.Logging</Name>
     </ProjectReference>
